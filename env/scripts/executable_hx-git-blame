@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+FILE=$1
+LINE=$2
+
+git blame -L $LINE,+100 $FILE --color-by-age --color-lines | 
+  fzf --ansi \
+      --border \
+     --delimiter ':' \
+      --height '100%' \
+      --multi \
+      --print-query --exit-0 \
+      --scrollbar '▍'
+

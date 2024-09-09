@@ -1,0 +1,15 @@
+FILE_LINE=$(wezterm cli get-text)
+
+RES=$(echo $FILE_LINE | rg -e "(?:NOR|INS|SEL)\s+(\S*)\s[^│]* (\d+):*.*" -o --replace '$1 $2')
+FILE=$(echo $RES | choose 0)
+LINE=$(echo $RES | choose 1)
+
+FILE=$(eval echo $FILE)
+
+TEMP=$(mktemp)
+nnn $FILE -d -Q -p $TEMP 
+while read -r line
+do 
+	echo "$line"
+done < "$TEMP"
+

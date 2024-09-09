@@ -1,0 +1,92 @@
+#!/usr/bin/env bash
+
+source ./live-common.sh
+
+# Set key bindings
+set_keys "$1"
+
+# Run grep and pipe into fzf with line highlighting in the preview
+IFS=$'\n' readarray -t selected_matches < <(run_grep_fzf "${@:2}")
+
+# Process and print selected matches
+selected_file=$(process_matches_abs_filepath "${selected_matches[@]}")
+
+if [ -z "$selected_file" ]; then
+    exit 0
+fi
+
+echo "$selected_file" | renamer 
+
+
+# # Colors
+# CATPPUCCIN_GREEN='#a6da95'
+# CATPPUCCIN_MAUVE='#c6a0f6'
+
+# # Key bindings
+# COPY_FILE_PATH='ctrl-y:execute(echo -n {1}:{2} | pbcopy)'
+# KEYS="$COPY_FILE_PATH"
+
+# # Optional flag for execution and exit behavior
+# if [[ $1 == '--exit-on-execution' ]]; then
+#   KEYS="$KEYS+abort"
+#   shift # remove the flag from the arguments so it's not passed to the `rg` command
+# fi
+
+# IFS=$'\n' readarray -t selected_matches < <(
+#   rg --color=always --line-number --no-heading --smart-case "${*:-}" |
+#     fzf --ansi \
+#       --border \
+#       --color "hl+:$CATPPUCCIN_GREEN:reverse,hl:$CATPPUCCIN_MAUVE:reverse" \
+#       --delimiter ':' \
+#       --height '100%' \
+#       --multi \
+#       --print-query --exit-0 \
+#       --preview 'bat {1} --highlight-line {2}' \
+#       --preview-window 'right,+{2}+3/3,~3' \
+#       --scrollbar '▍' \
+#       --bind "$KEYS"
+# )
+
+# # if [[ $1 == 'grep' ]]; then
+# #     IFS=$'\n' readarray -t selected_matches < <(
+# #       rg --color=always --line-number --no-heading --smart-case "${*:-}" |
+# #         fzf --ansi \
+# #           --border \
+# #           --color "hl+:$CATPPUCCIN_GREEN:reverse,hl:$CATPPUCCIN_MAUVE:reverse" \
+# #           --delimiter ':' \
+# #           --height '100%' \
+# #           --multi \
+# #           --print-query --exit-0 \
+# #           --preview 'bat {1} --highlight-line {2}' \
+# #           --preview-window 'right,+{2}+3/3,~3' \
+# #           --scrollbar '▍' \
+# #           --bind "$KEYS"
+# #     )
+# # else
+# #     IFS=$'\n' readarray -t selected_matches < <(
+# #         fzf --ansi \
+# #           --border \
+# #           --color "hl+:$CATPPUCCIN_GREEN:reverse,hl:$CATPPUCCIN_MAUVE:reverse" \
+# #           --delimiter ':' \
+# #           --height '100%' \
+# #           --multi \
+# #           --print-query --exit-0 \
+# #           --preview 'bat {1}' \
+# #           --preview-window 'right,+{2}+3/3,~3' \
+# #           --scrollbar '▍' \
+# #           --bind "$KEYS"
+# #     )
+# # fi
+
+
+# # Print the file path and line number of each match
+# selected_file=$(for line in "${selected_matches[@]:1}"; do
+#   file=$(echo "$line" | cut -d: -f1)
+#   line_number=$(echo "$line" | cut -d: -f2)
+#   echo "$(pwd)/$file"
+# done | tr ' ' '\n' | sort -u )
+
+# if [ -z "$selected_file" ]; then
+#     exit 0
+# fi
+# echo "$selected_file" | renamer 

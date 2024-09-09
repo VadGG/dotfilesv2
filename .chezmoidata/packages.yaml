@@ -35,6 +35,7 @@ packages:
       - "lf"      # File browser
       - "poppler" # Preview pdf
       - "glow"    # Preview markdown
+      - "lsd"     # ls alternative
       # Docker
       - "docker-compose"
       - "docker-buildx"
@@ -49,6 +50,7 @@ packages:
       - "yamllint"
       # Editors
       - "vim"
+      # - "helix"
       # Compilers
       - "gcc"
       - "cmake"
@@ -69,7 +71,7 @@ packages:
       - "wezterm"
       - "devtoys"
       - "font-fira-code-nerd-font"
-      - "docker"
+      # - "docker"
     taps:
       - "metalbear-co/mirrord"
       - "bramstein/webfonttools"

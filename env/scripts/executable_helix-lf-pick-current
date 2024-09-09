@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+HELIX_PANE_ID=$(wezterm cli get-pane-direction Up)
+FILE_LINE=$(wezterm cli get-text --pane-id $HELIX_PANE_ID)
+RES=$(echo $FILE_LINE | rg -e "(?:NOR|INS|SEL)\s+(\S*)\s[^│]* (\d+):*.*" -o --replace '$1 $2')
+FILE=$(echo $RES | choose 0)
+LINE=$(echo $RES | choose 1)
+
+FILE=$(eval echo $FILE)
+# live-grep: interactive search, output is "file:line" pairs
+FILE_PATHS=$(lf-pick $FILE --exit-on-execution | tr '\n' ' ' | sed 's/ *$//')
+
+# Get ID of the pane above in wezterm, which should be Helix
+HELIX_PANE_ID=$(wezterm cli get-pane-direction Up)
+
+if [[ -n "$FILE_PATHS" ]]; then
+
+  wezterm cli send-text --pane-id "$HELIX_PANE_ID" --no-paste ":"
+
+  # Send the "open" command with file path(s) to the pane
+  wezterm cli send-text --pane-id "$HELIX_PANE_ID" "open $FILE_PATHS"
+
+  # Simulate 'Enter' key to execute the command
+  printf "\r" | wezterm cli send-text --pane-id "$HELIX_PANE_ID" --no-paste
+
+fi
+

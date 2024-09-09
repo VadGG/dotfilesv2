@@ -1,0 +1,17 @@
+FILE=$1
+
+function lfp() {
+	local TEMP=$(mktemp)
+	if [ -n "$FILE" ]; then
+		lf -selection-path=$TEMP $FILE
+	else
+		lf -selection-path=$TEMP
+	fi
+	echo >> $TEMP
+	while read -r line
+	do 
+		echo "$line"
+	done < "$TEMP"
+}
+
+lfp
