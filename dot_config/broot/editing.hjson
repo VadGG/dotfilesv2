@@ -1,0 +1,76 @@
+verbs:
+[
+  {
+    key: ctrl-r
+    invocation: renamer
+    apply_to: file
+    external: "renamer -y {file}"
+    leave_broot: false
+  }
+  {
+    key: ctrl-n
+    invocation: touch {new_file}
+    external: touch {directory}/{new_file}
+    leave_broot: false
+    auto_exec: false
+  }
+
+  {
+    key: ctrl-shift-n
+    invocation: mkd {new_dir}
+    cmd: ":mkdir {new_dir}"
+    leave_broot: false
+    auto_exec: false
+  }
+  {
+    key: ctrl-x
+    invocation: rmdir
+    external: rm -rf {directory}
+    apply_to: directory
+    leave_broot: false
+    auto_exec: false
+  }
+  {
+    key: ctrl-x
+    invocation: rm
+    external: rm {file}
+    apply_to: file
+    leave_broot: false
+    auto_exec: false
+  }
+  {
+    key: ctrl-e
+    shortcut: e
+    external: $EDITOR {file}
+    leave_broot: false
+  }
+  {
+    invocation: write {subpath}
+    external: $EDITOR {directory}/{subpath}
+    leave_broot: false
+  }
+  {
+    key: ctrl-b
+    invocation: backup {version}
+    external: cp -r {file} {parent}/{file-stem}-{version}{file-dot-extension}
+    leave_broot: false
+    auto_exec: false
+  }
+  {
+    key: ctrl-d
+    invocation: clone
+    external: cp -r {file} {parent}/{file-stem}_clone{file-dot-extension}
+    leave_broot: false
+    auto_exec: true
+  }
+  {
+    key: ctrl-c
+    external: "cp -r {file} {other-panel-directory}"
+    leave_broot: false
+  }
+  {
+    key: ctrl-v
+    external: "mv {file} {other-panel-directory}"
+    leave_broot: false
+  }
+]

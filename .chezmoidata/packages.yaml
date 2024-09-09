@@ -1,0 +1,75 @@
+packages:
+  darwin:
+    brews:
+      # Install some other useful utilities like `sponge`.
+      - "moreutils"
+      # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
+      - "findutils"
+      # Install a modern version of Bash.
+      - "bash"
+      - "bash-completion2"
+      - "wget"
+      # Install GnuPG to enable PGP-signing commits.
+      - "gnupg"
+      # Install font tools.
+      - "sfnt2woff"
+      - "sfnt2woff-zopfli"
+      - "woff2"
+      # Languages
+      - "go@1.22"
+      - "rust"
+      - "nvm"
+      - "deno"
+      - "pnpm"
+      # Files related CLI
+      - "fzf"     # Search files
+      - "rg"      # Search file content
+      - "bat"     # Print file content with highlights
+      - "grep"
+      - "ast-grep" # Programming syntax smart grep
+      - "serpl"   # Search and replace with UI
+      # Files browser
+      - "tree"    # File tree
+      - "fd"      # Tree like
+      - "nnn"     # File browser
+      - "lf"      # File browser
+      - "poppler" # Preview pdf
+      - "glow"    # Preview markdown
+      # Docker
+      - "docker-compose"
+      - "docker-buildx"
+      # Kubernetes
+      - "kubectl"
+      - "kubent"  # Check kubernetes deprecations when upgrading
+      - "kind"
+      - "argocd"
+      # Configurations
+      - "helm"
+      - "yq"
+      - "yamllint"
+      # Editors
+      - "vim"
+      # Compilers
+      - "gcc"
+      - "cmake"
+      # Databases
+      - "sqlite"
+      - "mongosh"
+
+      # Others
+      - "git"
+      - "lazygit"
+      - "starship"
+      - "unzip"
+      - "youtube-dl"
+
+      # Webdev
+      - "hugo"
+    casks:
+      - "wezterm"
+      - "devtoys"
+      - "font-fira-code-nerd-font"
+      - "docker"
+    taps:
+      - "metalbear-co/mirrord"
+      - "bramstein/webfonttools"

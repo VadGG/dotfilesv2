@@ -1,0 +1,44 @@
+
+verbs:
+[
+  {
+   key: ctrl-h
+   internal: ":up_tree"
+  }
+  {
+    key: ctrl-l
+    internal: ":back"
+  }
+  {
+      key: ctrl-k
+      execution: ":line_up"
+  }
+  {
+      key: ctrl-j
+      execution: ":line_down"
+  }
+  {
+      key: ctrl-u
+      execution: ":page_up"
+  }
+  {
+    key: alt-down
+    invocation: go
+    internal: ":focus"
+  }
+  {
+    invocation: go {path}
+    internal: ":focus {path}"
+  }
+  {
+    invocation: clip
+    internal: ":copy_path"
+    leave_broot: false
+  }
+
+  {
+    invocation: focusabs {focus_path} {focus_file}
+    cmd: ":focus {focus_path};:select {focus_file}"
+    leave_broot: false
+  }
+]

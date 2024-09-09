@@ -1,0 +1,19 @@
+verbs:
+[
+  {
+    key: alt-n
+    internal: ":toggle_files"
+  }
+  {
+    key: alt-m
+    internal: ":toggle_sizes"
+  }
+  {
+    key: alt-.
+    internal: ":toggle_hidden"
+  }
+  {
+    key: alt-,
+    internal: ":toggle_git_ignore"
+  }
+]

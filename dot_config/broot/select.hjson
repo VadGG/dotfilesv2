@@ -1,0 +1,12 @@
+verbs:
+[
+  {
+    key: alt-enter
+    internal: ":print_path"
+  }
+  {
+    key: alt-enter
+    internal: ":print_path"
+    apply_to: file
+  }
+]

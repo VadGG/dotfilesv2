@@ -1,0 +1,95 @@
+format = """
+$username\
+$hostname\
+$shlvl\
+$directory\
+$nodejs\
+$git_branch\
+$git_commit\
+$git_metrics\
+$git_state\
+$git_status\
+$env_var\
+$status\
+$cmd_duration\
+$custom\
+$line_break\
+$jobs\
+$character\
+$battery\
+"""
+
+# COLORS
+# cyan         #74DCE9
+# green        #A8DE70
+# magenta      #FF5F87
+# orange       #FE9861
+# purple       #AB9BF5
+# yellow       #FFD95C
+# java_brown   #82664E
+# k8s_blue     #0087FF
+# node_green   #66CC33
+# ruby_red     #CB064D
+# gray         #767676
+
+[battery]
+disabled = false
+
+[character]
+error_symbol = '└[](bold red)'
+success_symbol = '└[](bold green)'
+
+[cmd_duration]
+format = '[\(took](fg:#767676) [$duration]($style)[\)](fg:#767676) '
+style = 'bold fg:#767676'
+
+[directory]
+format = ' [$path]($style)[$read_only]($read_only_style) '
+style = 'bold fg:#AB9BF5'
+
+[git_branch]
+format = ' [$symbol$branch]($style)'
+style = 'white'
+symbol = ' '
+
+[git_commit]
+format = '[\($hash$tag\)]($style)'
+style = 'bold fg:#FE9861'
+
+[git_state]
+format = ' \([$state( $progress_current/$progress_total)]($style)\)'
+style = 'bold fg:#FE9861'
+
+[git_status]
+ahead = ' [↑](bold green)[$count](white)'
+behind = ' [↓](bold red)[$count](white)'
+conflicted = ' [=](bold red)[$count](white)'
+deleted = ' [✕](red)[$count](white)'
+diverged = ' ⇕⇡${ahead_count}⇣${behind_count}'
+format = '[$all_status$ahead_behind]($style) '
+modified = ' •[$count](white)'
+renamed = ' »[$count](white)'
+staged = ' [+](bold green)[$count](white)'
+stashed = ' [ﰤ ](yellow)[$count](white)'
+style = 'bold fg:#FE9861'
+untracked = ' [⌀](white)[$count](white)'
+
+[hostname]
+format = ' [$hostname]($style)  '
+ssh_only = false
+style = 'bold cyan'
+
+[nodejs]
+format = ' [$symbol](bold white) [$version]($style) '
+style = 'bold fg:#66CC33'
+symbol = ''
+
+[status]
+disabled = false
+format = '[\[$status\]]($style) '
+style = 'red'
+
+[username]
+style_user = 'bold red'
+format = '┌ [$user]($style)  '
+show_always = true

@@ -1,0 +1,3 @@
+keybindings:
+  "<Ctrl-q>": "Quit"
+  "<Ctrl-h>": "ShowHelp"

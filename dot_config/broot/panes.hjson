@@ -1,0 +1,20 @@
+verbs:
+[
+
+  {
+    key: ctrl-right
+    internal: ":panel_right"
+  }
+  {
+    key: ctrl-shift-l
+    internal: ":panel_right"
+  }
+  {
+    key: ctrl-left
+    internal: ":panel_left"
+  }
+  {
+    key: ctrl-shift-h
+    internal: ":panel_left"
+  }
+]
