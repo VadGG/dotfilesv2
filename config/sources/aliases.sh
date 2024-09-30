@@ -20,3 +20,7 @@ if command -v kubectl &> /dev/null; then
 # else
 #   echo "kubectl is not installed. Using default ls."
 fi
+
+if command -v helm &> /dev/null; then
+  alias helm-images-find="helm template . | yq '..|.image? | select(.)' | sort -u"
+fi
