@@ -1,6 +1,6 @@
-
 #!/usr/bin/env bash
 
+echo "TEST"
 set -Eeuo pipefail
 
 if [ "${DOTFILES_DEBUG:-}" ]; then
