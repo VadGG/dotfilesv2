@@ -3,8 +3,6 @@
 {{     if eq .system "client" -}}
 {{       include "../install/ubuntu/common/font.sh" }}
 {{     end -}}
-{{   else -}}
-       echo "Invalid linux distribution: {{ .chezmoi.osRelease.id }}"
 {{   end -}}
 {{ else if eq .chezmoi.os "darwin" -}}
 {{   include "../install/macos/common/font.sh" }}
