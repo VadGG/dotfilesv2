@@ -5,7 +5,6 @@ readonly PACKAGES=(
     jq
     htop
     unzip
-    vim
     wget
 )
 
