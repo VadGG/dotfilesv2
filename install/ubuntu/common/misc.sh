@@ -1,11 +1,4 @@
-
 #!/usr/bin/env bash
-
-set -Eeuo pipefail
-
-if [ "${DOTFILES_DEBUG:-}" ]; then
-    set -x
-fi
 
 readonly PACKAGES=(
     curl
@@ -15,6 +8,14 @@ readonly PACKAGES=(
     vim
     wget
 )
+
+echo "Installing $PACKAGES..."
+
+set -Eeuo pipefail
+
+if [ "${DOTFILES_DEBUG:-}" ]; then
+    set -x
+fi
 
 function install_apt_packages() {
     sudo apt-get install -y "${PACKAGES[@]}"

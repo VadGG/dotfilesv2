@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+echo "Installing Fonts..."
 set -Eeuo pipefail
 
 if [ "${DOTFILES_DEBUG:-}" ]; then

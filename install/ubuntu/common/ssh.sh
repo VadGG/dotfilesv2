@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+echo "Instlaling ssh..."
 set -Eeuo pipefail
 
 if [ "${DOTFILES_DEBUG:-}" ]; then

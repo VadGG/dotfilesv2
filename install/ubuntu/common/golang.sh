@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+echo "Installing Golang.."
 set -Eeuo pipefail
 
 if [ "${DOTFILES_DEBUG:-}" ]; then

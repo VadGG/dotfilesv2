@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-echo "TEST"
+echo "Installing fzf.."
 set -Eeuo pipefail
 
 if [ "${DOTFILES_DEBUG:-}" ]; then
