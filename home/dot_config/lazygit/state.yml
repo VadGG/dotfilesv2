@@ -1,0 +1,26 @@
+lastupdatecheck: 0
+recentrepos:
+    - /Users/vadimgagarin/.local/share/chezmoi
+    - /Users/vadimgagarin/Development/dotfilesv2
+    - /Users/vadimgagarin/.Trash/bar.wezterm
+    - /Users/vadimgagarin/Development/dotfiles
+    - /Users/vadimgagarin/Development/Builder/helix-command-expansion/helix
+    - /Users/vadimgagarin/Kubernetes/Kind/argocd-app-of-app-01
+    - /Users/vadimgagarin/Kubernetes/Projects/nelm-test
+    - /Users/vadimgagarin/Kubernetes/Projects/django-uptime-service
+    - /Users/vadimgagarin/Kubernetes/Projects/django-uptime
+    - /Users/vadimgagarin/Kubernetes/Projects/helmfile-test
+    - /Users/vadimgagarin/Kubernetes/Projects/argocd-app-of-apps
+    - /Users/vadimgagarin/Documents/Obsidian Vault/VGTech
+    - /Users/vadimgagarin/Development/vscode-helix
+startuppopupversion: 5
+lastversion: 0.44.0
+customcommandshistory: []
+hidecommandlog: false
+ignorewhitespaceindiffview: true
+diffcontextsize: 3
+renamesimilaritythreshold: 50
+localbranchsortorder: recency
+remotebranchsortorder: alphabetical
+gitlogorder: topo-order
+gitlogshowgraph: always

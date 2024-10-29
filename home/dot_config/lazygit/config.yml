@@ -1,0 +1,47 @@
+gui:
+  timeFormat: "02 Jan 06 15:04 MST" # https://pkg.go.dev/time#Time.Format
+  scrollHeight: 15
+  scrollPastBottom: false
+  branchColors:
+    "main": "#b4f9f8"
+    "master": "#b4f9f8"
+  authorColors:
+    "*": "#636da6"
+  showIcons: true
+  showFileTree: true
+  theme:
+      activeBorderColor:
+        - '#f6c177'
+        - bold
+      inactiveBorderColor:
+        - '#a5adcb'
+      optionsTextColor:
+        - '#8aadf4'
+      selectedLineBgColor:
+        - '#363a4f'
+      cherryPickedCommitBgColor:
+        - '#494d64'
+      cherryPickedCommitFgColor:
+        - '#f5a97f'
+      unstagedChangesColor:
+        - '#ed8796'
+      defaultFgColor:
+        - '#cad3f5'
+      searchingActiveBorderColor:
+        - '#eed49f'
+
+      authorColors:
+        '*': '#b7bdf8'
+    
+
+# keybinding:
+#   commits:
+#     moveDownCommit: "<c-d>"
+#     moveUpCommit: "<c-u>"
+
+customCommands:
+  - key: c
+    command: "git checkout {{.SelectedRemoteBranch.Name}}"
+    context: remoteBranches
+    description: Checkout remote branch
+    loadingText: Checking out remote branch...

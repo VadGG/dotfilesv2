@@ -1,0 +1,139 @@
+[colors]
+ansi = [
+  "#252629", #Black
+  "#FF5D73", # Red - Bright pink (Crayola)
+  "#83BCA9", # Green - Cambridge blue
+  "#F4D06F", # Yellow _ Jasmine
+  "#2374AB", # Blue - UCLA Blue
+  "#9D44B5", # Purple - Purpureus
+  "#73A6AD", # Cyan - Moonstone
+  "#C5C5C5", # White - Silver
+]
+
+brights = [
+  "#575653", # Black
+  "#FE5F55", # Red - Bittersweet
+  "#D2F898", # Green - Mindaro
+  "#F0F2A6", # Yellow - Vanilla
+  "#76E5FC", # Blue - Non Photo blue
+  "#7F2CCB", # Purple - Vista blue
+  "#7CDEDC", # Cyan - Tiffany Blue
+  "#FFFFFF", # White
+]
+
+# foreground = "#DBD3CA"
+# background = "#252629"
+
+# cursor_bg = "#C76363"
+# cursor_border = "#C76363"
+# cursor_fg = "#DBD3CA"
+
+# selection_bg = "#314F52"
+# selection_fg = "#DBD3CA"
+
+foreground = "#DBD3CA"
+background = "#252629"
+
+cursor_bg = "#fff4b3"
+cursor_border = "#fff4b3"
+
+cursor_fg = "#64410c"
+
+# selection_bg = "rgba(248, 219, 200, 0.25)"
+selection_bg = "rgba(181, 255, 233, 0.25)"
+# selection_fg = "#252629"
+
+quick_select_label_bg.Color =  "#6E7271" 
+quick_select_label_fg.Color =  "#E3FFF9"
+
+quick_select_match_bg.Color =  "F8DBC8"
+quick_select_match_fg.Color =  "#252629"
+
+split = "#2F2D2E"
+
+copy_mode_active_highlight_bg = { Color = "#FF5D62" }
+copy_mode_active_highlight_fg = { Color = "#221A02" }
+
+
+
+# [colors]
+# ansi = [
+#     "#483939",
+#     "#B54851",
+#     "#D0796D",
+#     "#C6846C",
+#     "#938579",
+#     "#877B85",
+#     "#794F65",
+#     "#E0CFC6",
+# ]
+# background = "#FFF7EB"
+# # background = "#D0B8A8"
+# brights = [
+#     "#9C8181",
+#     "#C8767D",
+#     "#DB9A91",
+#     "#D4A391",
+#     "#AFA49B",
+#     "#A69DA4",
+#     "#A3728B",
+#     "#FFF7EB",
+# ]
+# compose_cursor = "#2D2424"
+# cursor_bg = "#2D2424"
+# cursor_border = "#2D2424"
+# cursor_fg = "#FFF7EB"
+# foreground = "#2D2424"
+# scrollbar_thumb = "#483939"
+# selection_bg = 'rgba(100% 97% 92% 50%)'
+# selection_fg = 'rgba(0% 0% 0% 0%)'
+
+# [colors.indexed]
+
+# [colors.tab_bar]
+# background = "#FFF7EB"
+
+# [colors.tab_bar.active_tab]
+# bg_color = "#877B85"
+# fg_color = "#FFF7EB"
+# intensity = 'Normal'
+# italic = false
+# strikethrough = false
+# underline = 'None'
+
+# [colors.tab_bar.inactive_tab]
+# bg_color = "#FFF7EB"
+# fg_color = "#2D2424"
+# intensity = 'Normal'
+# italic = false
+# strikethrough = false
+# underline = 'None'
+
+# [colors.tab_bar.inactive_tab_hover]
+# bg_color = "#483939"
+# fg_color = "#2D2424"
+# intensity = 'Normal'
+# italic = true
+# strikethrough = false
+# underline = 'None'
+
+# [colors.tab_bar.new_tab]
+# bg_color = "#FFF7EB"
+# fg_color = "#2D2424"
+# intensity = 'Normal'
+# italic = false
+# strikethrough = false
+# underline = 'None'
+
+# [colors.tab_bar.new_tab_hover]
+# bg_color = "#D0796D"
+# fg_color = "#2D2424"
+# intensity = 'Normal'
+# italic = true
+# strikethrough = false
+# underline = 'None'
+
+
+[metadata]
+name = "sunset"
+origin_url = 'https://github.com/frdwin/Everforest-Wezterm'
