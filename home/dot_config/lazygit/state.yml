@@ -1,8 +1,13 @@
 lastupdatecheck: 0
 recentrepos:
     - /Users/vadimgagarin/.local/share/chezmoi
+    - /Users/vadimgagarin/Development/ZSA_Keyboard/qmk_firmware
+    - /Users/vadimgagarin/Documents/Obsidian Vault/VGTech
+    - /Users/vadimgagarin/Documents/Obsidian Vault/VGTech/.obsidian/plugins/vg-obisidian-commons
+    - /Users/vadimgagarin/Development/ObsidianPlugins/vg-obsidian-commons
+    - /Users/vadimgagarin/config/Documents/Obsidian Vault/VGTech
+    - /Users/vadimgagarin/Documents/Obsidian Vault/obsidian-vault-quickadd-scripts
     - /Users/vadimgagarin/Development/dotfilesv2
-    - /Users/vadimgagarin/.Trash/bar.wezterm
     - /Users/vadimgagarin/Development/dotfiles
     - /Users/vadimgagarin/Development/Builder/helix-command-expansion/helix
     - /Users/vadimgagarin/Kubernetes/Kind/argocd-app-of-app-01
@@ -11,10 +16,9 @@ recentrepos:
     - /Users/vadimgagarin/Kubernetes/Projects/django-uptime
     - /Users/vadimgagarin/Kubernetes/Projects/helmfile-test
     - /Users/vadimgagarin/Kubernetes/Projects/argocd-app-of-apps
-    - /Users/vadimgagarin/Documents/Obsidian Vault/VGTech
     - /Users/vadimgagarin/Development/vscode-helix
 startuppopupversion: 5
-lastversion: 0.44.0
+lastversion: 0.44.1
 customcommandshistory: []
 hidecommandlog: false
 ignorewhitespaceindiffview: true

@@ -7,7 +7,7 @@ local gpus = wezterm.gui.enumerate_gpus()
 local rose_pine_theme = require('plugins/rose-pine').main
 
 -- local bar = wezterm.plugin.require("plugins/bar.wezterm")
-local tabline = wezterm.plugin.require("https://github.com/michaelbrusegard/tabline.wez")
+-- -- local tabline = wezterm.plugin.require("https://github.com/michaelbrusegard/tabline.wez")
 
 
 require("on")
@@ -247,43 +247,43 @@ local function mode_formatter()
 		return wezterm.GLOBAL.mode
 end 
 
-tabline.setup({
-  options = {
-    icons_enabled = true,
-    theme = 'Monokai Pro (Gogh)',
-    color_overrides = {},
-    section_separators = {
-      left = wezterm.nerdfonts.pl_left_hard_divider,
-      right = wezterm.nerdfonts.pl_right_hard_divider,
-    },
-    component_separators = {
-      left = wezterm.nerdfonts.pl_left_soft_divider,
-      right = wezterm.nerdfonts.pl_right_soft_divider,
-    },
-    tab_separators = {
-      left = wezterm.nerdfonts.pl_left_hard_divider,
-      right = wezterm.nerdfonts.pl_right_hard_divider,
-    },
-  },
-  sections = {
-    tabline_a = { 'mode', fmt = mode_formatter },
-    -- tabline_a = { test_format },
-    tabline_b = { 'workspace' },
-    tabline_c = { ' ' },
-    tab_active = {
-      'index',
-      { 'tab', padding = 0 },
-      '/',
-      { 'tab', padding = { left = 2, right = 1 } },
-      -- { 'zoomed', padding = 0 },
-    },
-    tab_inactive = { 'index', { 'process', padding = { left = 0, right = 1 } } },
-    tabline_x = { 'ram', 'cpu' },
-    tabline_y = { 'datetime', 'battery' },
-    tabline_z = { '' },
-  },
-  extensions = {},
-})
+-- tabline.setup({
+--   options = {
+--     icons_enabled = true,
+--     theme = 'Monokai Pro (Gogh)',
+--     color_overrides = {},
+--     section_separators = {
+--       left = wezterm.nerdfonts.pl_left_hard_divider,
+--       right = wezterm.nerdfonts.pl_right_hard_divider,
+--     },
+--     component_separators = {
+--       left = wezterm.nerdfonts.pl_left_soft_divider,
+--       right = wezterm.nerdfonts.pl_right_soft_divider,
+--     },
+--     tab_separators = {
+--       left = wezterm.nerdfonts.pl_left_hard_divider,
+--       right = wezterm.nerdfonts.pl_right_hard_divider,
+--     },
+--   },
+--   sections = {
+--     tabline_a = { 'mode', fmt = mode_formatter },
+--     -- tabline_a = { test_format },
+--     tabline_b = { 'workspace' },
+--     tabline_c = { ' ' },
+--     tab_active = {
+--       'index',
+--       { 'tab', padding = 0 },
+--       '/',
+--       { 'tab', padding = { left = 2, right = 1 } },
+--       -- { 'zoomed', padding = 0 },
+--     },
+--     tab_inactive = { 'index', { 'process', padding = { left = 0, right = 1 } } },
+--     tabline_x = { 'ram', 'cpu' },
+--     tabline_y = { 'datetime', 'battery' },
+--     tabline_z = { '' },
+--   },
+--   extensions = {},
+-- })
 
 
 local merged_config = utils.merge_tables(config, local_config)
