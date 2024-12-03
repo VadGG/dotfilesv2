@@ -94,10 +94,16 @@ cmd-alt-h = [] # Disable "hide others"
 #  '''
 
 
+alt-f = [
+  'exec-and-forget ~/.config/aerospace/scripts/center_floats',
+  'move-mouse window-force-center',
+  'mode main',
+]
 
 alt-enter = 'exec-and-forget open -n /Applications/WezTerm.app'
 alt-g = 'exec-and-forget open -n /Applications/Firefox.app'
 alt-d = 'exec-and-forget open -n /Applications/Obsidian.app'
+alt-b = 'exec-and-forget open -n /Applications/PCoIPClient.app'
 
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#layout
@@ -134,9 +140,9 @@ alt-w = 'workspace W'
 alt-e = 'workspace E'
 alt-r = 'workspace R'
 alt-t = 'workspace T'
-alt-c = 'workspace C'
-alt-v = 'workspace V'
-alt-b = 'workspace B'
+# alt-c = 'workspace C'
+# alt-v = 'workspace V'
+# alt-b = 'workspace B'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
 alt-shift-1 = 'move-node-to-workspace 1'
@@ -154,9 +160,9 @@ alt-shift-w = 'move-node-to-workspace W'
 alt-shift-e = 'move-node-to-workspace E'
 alt-shift-r = 'move-node-to-workspace R'
 alt-shift-t = 'move-node-to-workspace T'
-alt-shift-c= 'move-node-to-workspace C'
-alt-shift-v = 'move-node-to-workspace V'
-alt-shift-b = 'move-node-to-workspace B'
+# alt-shift-c= 'move-node-to-workspace C'
+# alt-shift-v = 'move-node-to-workspace V'
+# alt-shift-b = 'move-node-to-workspace B'
 
 alt-shift-m = 'fullscreen'
 
@@ -171,14 +177,15 @@ alt-shift-semicolon = 'mode service'
 alt-shift-s = 'mode resize'
 
 [workspace-to-monitor-force-assignment]
+1 = ['LG Ultra HD', 'built-in']
+2 = ['LG Ultra HD', 'built-in']
+3 = ['LG Ultra HD', 'built-in']
 Q = ['main', 'LG Ultra HD', 'built-in']
 W = ['main', 'LG Ultra HD', 'built-in']
 E = ['main', 'LG Ultra HD', 'built-in']
-R = ['LG Ultra HD', 'built-in']
-T = ['LG Ultra HD', 'built-in']
-C = ['built-in']
-V = ['built-in']
-B = ['built-in']
+6 = ['built-in']
+7 = ['built-in']
+8 = ['built-in']
 
 [mode.resize.binding]
 h = 'resize width -50'
